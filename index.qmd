@@ -1,0 +1,46 @@
+---
+title: "Playful Teaching of Simulation Models: From Monolithic Shiny Apps to Quarto Dashboards and webR"
+author: "Thomas Petzoldt and Johannes Feldbauer"
+date: "July 09 2026"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    footer: "Petzoldt & Feldbauer | useR!2026 | {{< meta date >}}"
+    css:
+      - footer-logo-left.css
+    title-slide-attributes:
+      data-visibility: "hidden"
+---
+
+## {.title-page}
+
+::::: title-slide-header
+![](tu_dresden_logo.svg){.logo-left}
+
+![](hydrobiology_logo.svg){.logo-right}
+:::::
+
+::::: title-slide-body
+:::: title-slide-left
+
+[Playful Teaching<br> of Simulation Models:<br> From Monolithic Shiny Apps to Quarto Dashboards and webR]{.big-title}
+
+[Thomas Petzoldt and<br> Johannes Feldbauer]{.blue}
+
+::::
+
+:::: title-slide-right
+![](climate-explorer.png){.title-illustration-img}
+::::
+:::::
+
+# Headline Slide
+
+## First Content Slide
+
+Content here...
+
+* lorem ipsum
+* foo foo bar bar bar
+
+

@@ -1,0 +1,19 @@
+meta:
+  name: "TU Dresden - Institute of Hydrobiology"
+
+logo:
+  small: tu_dresden_logo.svg
+  medium: tu_dresden_logo.svg
+
+color:
+  palette:
+    blue: "#0000ff"
+  foreground: "#333333"
+  background: "#ffffff"
+
+typography:
+  fonts:
+    - family: Noto Sans
+      source: google
+  base: Noto Sans
+  headings: Noto Sans

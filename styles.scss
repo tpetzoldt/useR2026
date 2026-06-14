@@ -1,0 +1,125 @@
+/*-- scss:defaults --*/
+
+// --- Brand colors ---
+$body-color: #00305d;
+$link-color: #009de0;
+$text-muted: #717778;
+
+// --- Fonts ---
+$mainFont: 'Noto Sans';
+$mainFontSize: 24px;
+$headingFont: 'Noto Sans';
+$headingTextTransform: none;
+$headingLetterSpacing: normal;
+$codeFont: 'Source Code Pro Semibold';
+
+
+/*-- scss:rules --*/
+
+.reveal { font-family: 'Noto Sans', sans-serif; }
+
+
+/* =========================================================
+   TITLE SLIDE
+   ========================================================= */
+
+/* Header: left logo pulled left, right logo flush right */
+.title-slide-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* padding: 10px 0 40px 20px;  */
+  box-sizing: border-box;
+}
+
+.title-slide-header > p { margin: 0; }
+
+.title-slide-header .logo-left  { width: 160px; height: auto; margin-left: -38%; }
+.title-slide-header .logo-right { width: 120px; height: auto; }
+
+/* Body: text left, image right; nudged downward */
+.title-slide-body {
+  margin-top: 16%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title-slide-left {
+  flex: 1.5;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.title-slide-left .big-title {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #003d82;
+  margin-bottom: 0.4em;
+}
+
+/* Right column: image, pushed further right */
+.title-slide-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;        /* moves the illustration further right */
+}
+
+.title-illustration-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+/* =========================================================
+   LISTS & MARKERS
+   ========================================================= */
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+
+ul li::marker {
+  color: #ee7f00;           /* orange list markers */
+}
+
+
+/* =========================================================
+   COLOR UTILITY CLASSES
+   ========================================================= */
+
+.red       { color: #ff0000; }
+.blue      { color: #006ab2; }
+.tudblue   { color: #003d82; }
+.cyan      { color: #009de0; }
+.gray      { color: #717778; }
+.neongreen { color: #69af22; }
+.orange    { color: #ee7f00; }
+.darkred   { color: #93107d; }
+
+
+/* =========================================================
+   FONT-SIZE UTILITY CLASSES
+   ========================================================= */
+
+.smallfont { font-size:  70%; line-height: 160%; }
+.bigfont   { font-size: 140%; line-height: 160%; }
+.hugefont  { font-size: 200%; line-height: 180%; }
+
+
+/* =========================================================
+   SPACING UTILITIES
+   ========================================================= */
+
+.add-space { padding-right: 5%; }
