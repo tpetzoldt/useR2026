@@ -178,38 +178,38 @@ The image is rather small, but the idea is to either:
 
 **Technical Fragmentation: Zoo of Apps**
 
-* deployment: server load / load balancing, security, OS updates
-* apps need also regular updates and maintenance
-* each app has its own philosophy, package dependencies etc.
+Current Issues:
+
+* Server load, security, and OS updates
+* Regular updates and maintenance required
+* Each app has unique dependencies and design philosophy
 
 
 **Didactical:  Media Fragmentation**
 
-* Small self-explanatory apps -- limited complexity
-* Complex stand-alone apps: 
-  - difficult to integrate explanation and code, 
-  - creating clean structure -- high effort for the developer 
-  - narratives within the code -- overwhelming for the user
-  - need explanation by instructor and/or handouts on paper
-* Storyboards -- mostly linear, more "show" than learning effect
+Learning Challenges:
+
+* Small apps: Limited complexity, self-explanatory but shallow
+* Complex apps: High development effort, overwhelming for users, require external explanations (e.g., handouts)
+* Storyboards: Linear, more focused on presentation than active learning
+
 
 
 # Approach
 
 ## Step 1: Integrated Dashboard with Quarto
 
-* Unified UI: Consistent layout and interaction
-  - intentionally simple
-  - reduce confusion of the user
-* Integrated: narrative + interactive code + vizusalization
-  - Explanatory text, tasks and outlook at different levels
-  - Supports active, scaffolded learning and immediate feedback
-  - Self-explaining, exploratory learning: Learners can engage deeply without relying on external handouts or instructor intervention.
-* Modular: maintainable code and narrative text: 
-  - Each tab implemented in a separate file
-  - Easier updates and scalability
-  - Modularity allows easier internationalization using AI tools
+* Unified UI: 
   - Top-hierarchy as Quarto document
+  - Simple, consistent layout to reduce user confusion
+* Integrated Design: 
+  - Combines narrative, interactive code, and visualization
+  - Supports active learning with immediate feedback
+  - Self-explanatory for exploratory learning
+* Modular Structure:
+  - Tabs implemented in separate files for easier updates
+  - Scalable and maintainable
+  - Enables internationalization with AI tools
   
   
 ## Demo
