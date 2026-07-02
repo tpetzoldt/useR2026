@@ -34,13 +34,194 @@ format:
 ::::
 :::::
 
-# Headline Slide
+# The Original Challenge
 
-## First Content Slide
+## Complex Systems 
 
 Content here...
 
 * lorem ipsum
 * foo foo bar bar bar
+
+
+
+## Qualified People?
+
+![Search for qualified students who are interested in ecology **and** modeling](img/unitag.jpg)
+
+## Current Situation
+
+<br>
+
+$\Rightarrow$ Modeling and data science became an important part of limnology.
+
+<br>
+
+
+**Demand in Research and Engineering**
+
+* people who can [use]{.cyan} computers
+* people who can [understand]{.cyan} models
+* people who are able to [develop]{.cyan} models
+
+**School Experience** 
+
+* [mathematics]{.neongreen} is complicated
+* [programming]{.neongreen} is something for nerds 
+* differential [calculus]{.neongreen} is rocket science
+
+**Domain knowledge** 
+
+<!-- channge this if for another conference -->
+* limnology, of course 😉
+
+
+## Web-based Apps with Shiny
+
+<br>
+
+* Interactivity: Playful exploration of dynamic systems
+* Data: Direct access to test cases and real world data
+* Algorithms: full **R** ecosystemavailable
+
+→ No installation hurdles, no Excel debugging, no problems with csv2
+
+<br>
+
+## Use for Teaching and Project Communication
+
+<br>
+
+1. General Public
+2. Interested public
+3. People with domain specific education
+4. Specialists
+
+<br>
+
+**For example ...**
+
+* School kids and their parents
+* People who want to see the facts of climate warming
+* Participants of an ecological conference
+* Reservoir management professionals
+
+
+
+## Example 1: Lake Profile Plotter
+
+<br></br>
+
+::: {.column width="49%"}
+* Analysis of multiparameter probe data
+    - Complex interactions between temperature, light, algae, oxygen, pH, conductivity
+    - Excel data structures, plotting, trend line, colors, ... distract from content
+* Concentrate on scientific background and data interpretation
+:::
+
+::: {.column width="50%"}
+![[https://weblab.hydro.tu-dresden.de/app/lakeplot/](https://weblab.hydro.tu-dresden.de/app/lakeplot/)](img/lakeplot.png)
+:::
+
+$\Rightarrow$ Has also passed its acid test in field courses.
+
+## Example 2: Climate Data Explorer
+
+<!---
+The image is rather small, but the idea is to either:
+
+- zoom in with Alt + Mouse click to center of Zoom region
+- open link: it opens in a new browser tab, then move back by selecting the presentation tab
+--->
+
+<br></br>
+
+::: {.column width="33%"}
+
+<br></br>
+
+* Visualisation of climate data and trends
+* Direct access to data from the [German Weather Service](https://www.dwd.de)
+* Used in teaching and for public outreach
+:::
+
+::: {.column width="66%"}
+![[https://weblab.hydro.tu-dresden.de/app/dwd-trends/](https://weblab.hydro.tu-dresden.de/app/dwd-trends/)](img/dwd-trends.png)
+:::
+
+## Example 3: Reservoir Management with a hydrophysical model
+
+<br></br>
+
+::: {.column width="33%"}
+
+<br></br>
+
+* 1D hydrophysical model GOTM provided as web service
+* Predefined scenarios
+* Quick performance
+* Results can be downloaded
+:::
+
+::: {.column width="66%"}
+![[https://weblab.hydro.tu-dresden.de/app/talsperre/](https://weblab.hydro.tu-dresden.de/app/talsperre/)](img/talsperre.png)
+:::
+
+
+# Is everything solved now?
+
+# No
+
+## "Classical" Shiny Apps
+
+<br>
+
+**Technical Fragmentation: Zoo of Apps**
+
+* deployment: server load / load balancing, security, OS updates
+* apps need also regular updates and maintenance
+* each app has its own philosophy, package dependencies etc.
+
+
+**Didactical:  Media Fragmentation**
+
+* Small self-explanatory apps -- limited complexity
+* Complex stand-alone apps: 
+  - difficult to integrate explanation and code, 
+  - creating clean structure -- high effort for the developer 
+  - narratives within the code -- overwhelming for the user
+  - need explanation by instructor and/or handouts on paper
+* Storyboards -- mostly linear, more "show" than learning effect
+
+
+# Approach
+
+## Step 1: Integrated Dashboard with Quarto
+
+* Unified UI: Consistent layout and interaction
+  - intentionally simple
+  - reduce confusion of the user
+* Integrated: narrative + interactive code + vizusalization
+  - Explanatory text, tasks and outlook at different levels
+  - Supports active, scaffolded learning and immediate feedback
+  - Self-explaining, exploratory learning: Learners can engage deeply without relying on external handouts or instructor intervention.
+* Modular: maintainable code and narrative text: 
+  - Each tab implemented in a separate file
+  - Easier updates and scalability
+  - Modularity allows easier internationalization using AI tools
+  - Top-hierarchy as Quarto document
+  
+  
+## Demo
+
+[https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/)
+
+
+
+
+
+
+
+
 
 
