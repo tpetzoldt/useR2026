@@ -45,7 +45,7 @@ format:
 }
 
 /* add blue frame around inline figures */
-.reveal section img {
+.reveal section img.framed {
   border: 2px solid #e0f2fe !important;
   padding: 4px;
   border-radius: 4px;
@@ -133,7 +133,7 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 :::
 
 ::: {.column width="50%"}
-![[https://weblab.hydro.tu-dresden.de/app/lakeplot/](https://weblab.hydro.tu-dresden.de/app/lakeplot/)](img/lakeplot.png)
+![[https://weblab.hydro.tu-dresden.de/app/lakeplot/](https://weblab.hydro.tu-dresden.de/app/lakeplot/)](img/lakeplot.png){.framed}
 :::
 
 $\Rightarrow$ Has also passed its acid test in field courses.
@@ -159,7 +159,7 @@ The image is rather small, but the idea is to either:
 :::
 
 ::: {.column width="66%"}
-![[https://weblab.hydro.tu-dresden.de/app/dwd-trends/](https://weblab.hydro.tu-dresden.de/app/dwd-trends/)](img/dwd-trends.png)
+![[https://weblab.hydro.tu-dresden.de/app/dwd-trends/](https://weblab.hydro.tu-dresden.de/app/dwd-trends/)](img/dwd-trends.png){.framed}
 :::
 
 ## Example 3: Reservoir Management Model
@@ -179,7 +179,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 :::
 
 ::: {.column width="66%"}
-![[https://weblab.hydro.tu-dresden.de/app/talsperre/](https://weblab.hydro.tu-dresden.de/app/talsperre/)](img/gotm-app.png)
+![[https://weblab.hydro.tu-dresden.de/app/talsperre/](https://weblab.hydro.tu-dresden.de/app/talsperre/)](img/gotm-app.png){.framed}
 :::
 
 
@@ -234,7 +234,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 
 ::: {.column width="50%"}
-![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-title.png)
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-title.png){.framed}
 :::
 
 
@@ -345,7 +345,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 
 ::: {.column width="50%"}
-![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png)
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png){.framed}
 :::
 
 
@@ -370,7 +370,7 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive wi
 
 ::: {.column width="50%"}
 
-![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png)
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png){.framed}
 :::
 
 
@@ -413,7 +413,7 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive wi
 ## Demo
 
 
-![[https://tpetzoldt.github.io/simbiose-w/](https://tpetzoldt.github.io/simbiose-w/)](img/simbiose-w-title-shinylive.png)
+![[https://tpetzoldt.github.io/simbiose-w/](https://tpetzoldt.github.io/simbiose-w/)](img/simbiose-w-title-shinylive.png){.framed}
 
 
 # Conclusions
