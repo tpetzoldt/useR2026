@@ -64,11 +64,21 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 * Aquatic ecology, in my case 😉
 
 
-## Web-based Apps with Shiny
+## Use of Web-based Apps with Shiny
 
 <br>
 
-* Interactivity: Playful exploration of dynamic systems
+**Applications**
+
+* Understanding of statistical concepts (e.g. autocorrelation)
+* Exploration of dynamic systems (growth, predator-prey, chaos)
+* Analysis of experimental data (e.g. from measurement probes)
+* Complex ecological models, e.g. Cyanobacteria in lakes, Reservoir Management
+
+
+**Advantages**
+
+* Interactivity: Playful exploration of models and data
 * Data: Direct access to test cases and real world data
 * Algorithms: full **R** ecosystemavailable
 
@@ -76,24 +86,19 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 
 <br>
 
-## Use for Teaching and Project Communication
+## Use Project Communication and Teaching
 
 <br>
-
-1. General Public
-2. Interested public
-3. People with domain specific education
-4. Specialists
-
 <br>
 
-**For example ...**
+**For example**
 
-* School kids and their parents
-* People who want to see the facts of climate warming
+* Students of Aquatic Ecology, Hydroscience and Engineering
+* People, interested in the **facts** of climate warming
 * Participants of an ecological conference
 * Reservoir management professionals
-
+* Students who want to become high-school teachers
+* School kids ... and their parents
 
 
 ## Example 1: Lake Profile Plotter
@@ -188,6 +193,8 @@ Learning Challenges:
 
 ## Integrated Dashboard with Quarto
 
+::: {.column width="49%"}
+
 * Unified UI: 
   - Top-hierarchy as Quarto document
   - Simple, consistent layout to reduce user confusion
@@ -199,6 +206,14 @@ Learning Challenges:
   - Tabs implemented in separate files for easier updates
   - Scalable and maintainable
   - Enables internationalization with AI tools
+
+:::
+
+::: {.column width="50%"}
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-title.png)
+:::
+
+
 
 <!------------------------------------------------------------------------------>
 ## Quarto Structure Example
@@ -275,7 +290,23 @@ Learning Challenges:
   
 ## Demo
 
-[https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/)
+
+<br></br>
+
+::: {.column width="49%"}
+* App to vizualize essential growth processes
+    - by example of a food-web in a lake
+    - contains extensive textual information
+* Target groups:
+    - students of aquatic ecology
+    - higschool biology teacher students
+    - highschool students (11th year)
+:::
+
+::: {.column width="50%"}
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png)
+:::
+
 
 
 ## Example: Predator-Prey Model
@@ -306,7 +337,7 @@ The minimalistic design supports active learning and exploration.
 
 [^shinylive]: [https://posit-dev.github.io/r-shinylive/](https://posit-dev.github.io/r-shinylive/)
 [^webR]: [https://docs.r-wasm.org/webr/](https://docs.r-wasm.org/webr/)
- [^WebAssembly]: [https://webassembly.org/](https://webassembly.org/)
+[^WebAssembly]: [https://webassembly.org/](https://webassembly.org/)
 
 
 ## Advantages and Challenges of Web-R
@@ -326,7 +357,9 @@ The minimalistic design supports active learning and exploration.
 
 ## Demo
 
-[https://tpetzoldt.github.io/simbiose-w/](https://tpetzoldt.github.io/simbiose-w/)
+
+![[https://tpetzoldt.github.io/simbiose-w/](https://tpetzoldt.github.io/simbiose-w/)](img/simbiose-w-title-shinylive.png)
+
 
 # Conclusions
 
