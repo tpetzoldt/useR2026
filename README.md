@@ -4,6 +4,6 @@
 
 * Growth Models App, implemented with Quarto-Dashboard and Shinylive: https://tpetzoldt.github.io/simbiose-w
 
-* Homepage of the author: https://tu-dresden.de/members/thomas.petzoldt
+* Homepage of the author: https://tu-dresden.de/Members/thomas.petzoldt
 
 
