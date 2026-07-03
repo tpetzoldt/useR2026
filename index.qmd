@@ -34,26 +34,14 @@ format:
 ::::
 :::::
 
-# The Original Challenge
-
-## Complex Systems 
-
-Content here...
-
-* lorem ipsum
-* foo foo bar bar bar
+# The Teaching Challenge
 
 
-
-## Qualified People?
-
-![Search for qualified students who are interested in ecology **and** modeling](img/unitag.jpg)
-
-## Current Situation
+## Increasing Complexity and Cross-Disciplinary Skills
 
 <br>
 
-$\Rightarrow$ Modeling and data science became an important part of limnology.
+$\Rightarrow$ Modeling and data science became an important part of almost every field.
 
 <br>
 
@@ -73,7 +61,7 @@ $\Rightarrow$ Modeling and data science became an important part of limnology.
 **Domain knowledge** 
 
 <!-- channge this if for another conference -->
-* limnology, of course 😉
+* Aquatic ecology, in my case 😉
 
 
 ## Web-based Apps with Shiny
@@ -195,9 +183,10 @@ Learning Challenges:
 
 
 
-# Approach
+# Step 1: Seamless Integration of Code and Docs
 
-## Step 1: Integrated Dashboard with Quarto
+
+## Integrated Dashboard with Quarto
 
 * Unified UI: 
   - Top-hierarchy as Quarto document
@@ -210,6 +199,78 @@ Learning Challenges:
   - Tabs implemented in separate files for easier updates
   - Scalable and maintainable
   - Enables internationalization with AI tools
+
+<!------------------------------------------------------------------------------>
+## Quarto Structure Example
+
+
+::: {.column width="49%"}
+
+<br>
+
+* Outline with repeated elements
+* Caption hierarchy defines dashboard structure
+    - Top Menu
+    - Tabs
+* Modular and extensible
+    - Independent code and text files
+    - Independent testing and debugging
+    - Easy translation
+    - Adaptible for different audiences
+
+:::
+
+::: {.column width="49%"}
+```markdown
+# Exponential Growth
+
+## Description
+
+::: {.panel-tabset width="38%"}
+
+### Example
+
+{{{< include exponential_example.qmd >}}}
+
+### The Model
+
+{{{< include exponential_description.qmd >}}}
+
+### Tasks
+
+{{{< include exponential_tasks.qmd >}}}
+
+### Hints
+
+{{{< include exponential_hints.qmd >}}}
+
+### Read More
+
+{{{< include exponential_more.qmd >}}}
+
+:::
+
+<!-- contains code for 2 columns: widgets + graphics --->
+{{{< include ../code/exponential_code.qmd >}}}
+
+# Limited Growth
+
+## Description
+
+...
+
+# Nutrient Limited Growth
+
+...
+
+# Predator-Prey Model
+
+...
+
+```
+:::
+
+<!----------------------------------------------------------------------------->
   
   
 ## Demo
@@ -217,11 +278,107 @@ Learning Challenges:
 [https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/de/)
 
 
+## Example: Predator-Prey Model
+
+Each section has a detailed **Description**, providing context and an overview of the topic. 
+
+It is organized as **Panel Tabset**:
+
+- Example: Introductory text with a real-world scenario
+- The Model: Explanation of underlying processes and equations
+- Tasks: Exercises to explore model dynamics
+- Hints: Guidance for solving tasks
+- Read More: Links to additional resources or references
+
+The **Widgets and Graphics** card integrates Shiny code to create interactive widgets and visualizations, displayed in two-column layout.
+The minimalistic design supports active learning and exploration.
+
+
+# Step 2: "Serverless" Deployment
+
+## Avoid Specialized Shiny Server
+
+<br>
+
+- Convert Shiny app with **shinylive**[^shinylive] into standalone **Web-R**[^webR]-Apps
+- Uses **WebAssembly**[^WebAssembly] to run R and the app entirely in the browser
+- Deployment: No R server or Shiny server is required
+
+[^shinylive]: [https://posit-dev.github.io/r-shinylive/](https://posit-dev.github.io/r-shinylive/)
+[^webR]: [https://docs.r-wasm.org/webr/](https://docs.r-wasm.org/webr/)
+ [^WebAssembly]: [https://webassembly.org/](https://webassembly.org/)
+
+
+## Advantages and Challenges of Web-R
+
+### **Advantages**
+- Runs on any web server, including static ones
+- Eliminates the need for a dedicated Shiny server
+
+### **Challenges**
+- **Startup delay**: All required packages must be loaded from the web
+- **Package availability**: Some R packages, like **deSolve**, are not compatible with Web-R
+
+### **Solution**
+- Simplify code and reduce dependencies.
+- Use **base graphics** instead of heavier packages like **ggplot2**.
+- Implement a standalone ODE45 solver in pure R to replace unavailable packages.
+
+## Demo
+
+[https://tpetzoldt.github.io/simbiose-w/](https://tpetzoldt.github.io/simbiose-w/)
+
+# Conclusions
+
+---
+
+## Pros and Cons
+
+<br>
+
+:::{.smallfont}
+
+| **Property**                          | **Complex Shiny Apps**                                                                                   | **Quarto Dashboards with Shiny**                                                                               | **Shinylive Apps**                                                                                      |
+|---------------------------------------|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **Full Power of R**                   | Full access to R's capabilities, including compiled code.                         | Full access to R's capabilities, including compiled code.          | Supports WASM-compatible R packages and user-level code.              |
+| **Implementation**           | [Full flexibility, supports backend code (e.g. compiled binaries) and database access.]{.neongreen}        | Flexible and [consistent layout]{.neongreen}; supports backends and database access. | [Runs entirely in the browser]{.neongreen}, no backend or database access, startup delay.                       |
+| **Ease of Implementation**            | Requires significant expertise in Shiny, R, and web development, especially for maintenance.             | Easy to implement and maintain; [Quarto simplifies layout and integration.]{.neongreen}                                      | [Easy to implement, no server setup required, apps can be deployed as static files.]{.neongreen}                   |
+| **Server Infrastructure**             | Requires Shiny Server or Posit Connect for deployment. May need scaling of CPU and memory.               | Requires Shiny Server or Posit Connect for deployment. May need scaling of CPU and memory | [Scales effortlessly as apps run entirely in the browser.]{.neongreen}                            |
+| **Integration of Code and Tutorials** | [Allows complex applications]{.neongreen}, but may require external tutorials or handouts.                      | [Integration of code, text, and interactivity in a single document]{.neongreen}; ideal for teaching.                | [No dependency on specific maintainer and server provider]{.neongreen}; excellent for didactic purposes. |
+
+:::
 
 
 
+## Summary
 
+1. **Complex Shiny Apps**
+    - For complex applications requiring backend integration, databases, etc.
+    - High flexibility but significant technical and implementation overhead.
+    - Didactic material often separate, less suitable for self-directed learning.
 
+2. **Quarto Dashboards with Shiny**
+    - Balance between complexity and ease of use.
+    - Suitable for moderately complex applications.
+    - Integrates text, visualization, and interactivity in a single document.
 
+3. **Shinylive Apps**
+    - Best for lightweight applications that run entirely in the browser.
+    - Ideal if number of users is large or unknown, no CPU scaling issues.
+    - Ensures longevity of tutorials, independent of external hosting and maintenance.
+
+4. **Dashboards with Shinylive**
+    - Combines the advantages of Quarto Dashboards and Shinylive.
+    - A highly appealing approach for teaching apps of medium complexity.
+    
+## Acknowledgments
+
+<br>
+<br>
+
+* Luisa Henze, Monique Meier, Thomas Berendonk
+* Digital Learning and Teaching Fund of TU Dresden [...]{https://tu-dresden.de/zill/foerdermoeglichkeiten/fondsdll}
+
+The R Community
 
 
