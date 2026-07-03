@@ -1,5 +1,6 @@
 ---
-title: "Playful Teaching of Simulation Models: From Monolithic Shiny Apps to Quarto Dashboards and webR"
+title: "Playful Teaching of Simulation Models"
+subtitle: "From Monolithic Shiny Apps to Quarto Dashboards and webR"
 author: "Thomas Petzoldt and Johannes Feldbauer"
 date: "July 09 2026"
 format:
@@ -473,11 +474,11 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive co
 ## Acknowledgments
 
 ::: {.column width="70%"}
-<br>
+
 <br>
 
 * Luisa Henze, Monique Meier, Thomas Berendonk
-* Digital Learning and Teaching Fund of TU Dresden [...](https://tu-dresden.de/zill/foerdermoeglichkeiten/fondsdll)
+* Digital Learning and Teaching Fund of TU Dresden [[link]](https://tu-dresden.de/zill/foerdermoeglichkeiten/fondsdll)
 
 ![TUD - Dresden University of Technology](img/tu_dresden_logo.svg){height=80}
 ![Institute of Hydrobiology](img/hydrobiology_logo.svg){height=100}
@@ -492,6 +493,13 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive co
 
 ::: {.column width="30%"}
 ![](img/waterfall.jpg)
+
 :::
+
+#
+
+![](img/qr-github.svg){height=100}
+
+[https://github.com/tpetzoldt/useR2026/](https://github.com/tpetzoldt/useR2026/)
 
 
