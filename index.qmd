@@ -12,12 +12,13 @@ format:
       data-visibility: "hidden"
 ---
 
+
 ## {.title-page}
 
 ::::: title-slide-header
-![](tu_dresden_logo.svg){.logo-left}
+![](img/tu_dresden_logo.svg){.logo-left}
 
-![](hydrobiology_logo.svg){.logo-right}
+![](img/hydrobiology_logo.svg){.logo-right}
 :::::
 
 ::::: title-slide-body
@@ -30,9 +31,28 @@ format:
 ::::
 
 :::: title-slide-right
-![](climate-explorer.png){.title-illustration-img}
+![](img/dwd-trends.png){.title-illustration-img}
 ::::
 :::::
+
+<style>
+/* Target the fenced block's container and inner code elements */
+.blue-code-block .sourceCode, 
+.blue-code-block pre, 
+.blue-code-block code {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+/* add blue frame around inline figures */
+.reveal section img {
+  border: 2px solid #e0f2fe !important;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+</style>
+
 
 # The Teaching Challenge
 
@@ -78,9 +98,9 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 
 **Advantages**
 
-* Interactivity: Playful exploration of models and data
+* Interactivity: Playful exploration of data and models
 * Data: Direct access to test cases and real world data
-* Algorithms: full **R** ecosystemavailable
+* Algorithms: full **R** ecosystem available
 
 → No installation hurdles, no Excel debugging, no problems with csv2
 
@@ -134,7 +154,7 @@ The image is rather small, but the idea is to either:
 <br></br>
 
 * Visualisation of climate data and trends
-* Direct access to data from the [German Weather Service](https://www.dwd.de)
+* Data retrieval from the [German Weather Service](https://www.dwd.de)
 * Used in teaching and for public outreach
 :::
 
@@ -142,7 +162,7 @@ The image is rather small, but the idea is to either:
 ![[https://weblab.hydro.tu-dresden.de/app/dwd-trends/](https://weblab.hydro.tu-dresden.de/app/dwd-trends/)](img/dwd-trends.png)
 :::
 
-## Example 3: Reservoir Management with a hydrophysical model
+## Example 3: Reservoir Management Model
 
 <br></br>
 
@@ -150,64 +170,68 @@ The image is rather small, but the idea is to either:
 
 <br></br>
 
-* 1D hydrophysical model GOTM provided as web service
+Influence of Climate Warming on Water Availability from Drinking Water Reservoirs
+
+* Hydrophysical model [GOTM](https://gotm.net/) provided as web service
 * Predefined scenarios
 * Quick performance
 * Results can be downloaded
 :::
 
 ::: {.column width="66%"}
-![[https://weblab.hydro.tu-dresden.de/app/talsperre/](https://weblab.hydro.tu-dresden.de/app/talsperre/)](img/talsperre.png)
+![[https://weblab.hydro.tu-dresden.de/app/talsperre/](https://weblab.hydro.tu-dresden.de/app/talsperre/)](img/gotm-app.png)
 :::
 
 
-# Is everything solved now?
 
-# No
+# 
+
+[Is everything perfect now?]{.hugefont}
+
+::: {.fragment .fade-up}
+[No]{.hugefont}
+:::
 
 ## "Classical" Shiny Apps
 
-<br>
+<br><br>
 
 **Technical Fragmentation: Zoo of Apps**
-
-Current Issues:
 
 * Server load, security, and OS updates
 * Regular updates and maintenance required
 * Each app has unique dependencies and design philosophy
 
 
+<br>
+
 **Didactical:  Media Fragmentation**
 
-Learning Challenges:
-
 * Small apps: Limited complexity, self-explanatory but shallow
-* Complex apps: High development effort, overwhelming for users, require external explanations (e.g., handouts)
+* Complex apps: 
+    - High development effort, 
+    - Overwhelming for users, require external explanations (e.g., handouts)
 * Storyboards: Linear, more focused on presentation than active learning
 
 
+# Approach
 
-# Step 1: Seamless Integration of Code and Docs
+## Step 1: Seamless Integration of Code and Docs
 
+<br>
 
-## Integrated Dashboard with Quarto
 
 ::: {.column width="49%"}
-
-* Unified UI: 
-  - Top-hierarchy as Quarto document
-  - Simple, consistent layout to reduce user confusion
-* Integrated Design: 
-  - Combines narrative, interactive code, and visualization
-  - Supports active learning with immediate feedback
-  - Self-explanatory for exploratory learning
-* Modular Structure:
-  - Tabs implemented in separate files for easier updates
-  - Scalable and maintainable
-  - Enables internationalization with AI tools
+* App to vizualize essential growth processes
+    - by example of a food-web in a lake
+    - contains extensive textual information
+* Target groups:
+    - students of aquatic ecology
+    - higschool biology teacher students
+    - highschool students (11th year)
 
 :::
+
 
 ::: {.column width="50%"}
 ![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-title.png)
@@ -235,7 +259,10 @@ Learning Challenges:
 
 :::
 
-::: {.column width="49%"}
+
+:::: {.column width="49%"}
+::: {.blue-code-block}
+
 ```markdown
 # Exponential Growth
 
@@ -263,7 +290,7 @@ Learning Challenges:
 
 {{{< include exponential_more.qmd >}}}
 
-:::
+::: <!-- end tab set --->
 
 <!-- contains code for 2 columns: widgets + graphics --->
 {{{< include ../code/exponential_code.qmd >}}}
@@ -285,23 +312,37 @@ Learning Challenges:
 ```
 :::
 
+::::
+
 <!----------------------------------------------------------------------------->
   
   
-## Demo
+## Example: Predator-Prey Model
 
 
 <br></br>
 
-::: {.column width="49%"}
-* App to vizualize essential growth processes
-    - by example of a food-web in a lake
-    - contains extensive textual information
-* Target groups:
-    - students of aquatic ecology
-    - higschool biology teacher students
-    - highschool students (11th year)
+
+::: {.column width="50%"}
+
+**Unified UI**
+
+- Top-hierarchy as Quarto document
+- Simple, consistent layout
+- → Reduce user confusion
+
+**Integrated Design**
+
+- Narrative + interaction + graphics
+- → Suitable for self-directed learning
+  
+**Modular Structure**
+
+- Separate files allow easier updates
+- Scalable and maintainable
+  
 :::
+
 
 ::: {.column width="50%"}
 ![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png)
@@ -309,11 +350,13 @@ Learning Challenges:
 
 
 
-## Example: Predator-Prey Model
+## Demo
 
-Each section has a detailed **Description**, providing context and an overview of the topic. 
+<br><br>
 
-It is organized as **Panel Tabset**:
+::: {.column width="50%"}
+
+Each section has a **Description**, organized as **Panel Tabset**:
 
 - Example: Introductory text with a real-world scenario
 - The Model: Explanation of underlying processes and equations
@@ -321,15 +364,22 @@ It is organized as **Panel Tabset**:
 - Hints: Guidance for solving tasks
 - Read More: Links to additional resources or references
 
-The **Widgets and Graphics** card integrates Shiny code to create interactive widgets and visualizations, displayed in two-column layout.
-The minimalistic design supports active learning and exploration.
+The **Widgets and Graphics** card integrates Shiny code to create interactive widgets and visualizations in a two-column layout.
+
+:::
+
+::: {.column width="50%"}
+
+![[https://weblab.hydro.tu-dresden.de/app/simbiose-w/](https://weblab.hydro.tu-dresden.de/app/simbiose-w/en/)](img/simbiose-w-lv.png)
+:::
+
 
 
 # Step 2: "Serverless" Deployment
 
 ## Avoid Specialized Shiny Server
 
-<br>
+<br><br>
 
 - Convert Shiny app with **shinylive**[^shinylive] into standalone **Web-R**[^webR]-Apps
 - Uses **WebAssembly**[^WebAssembly] to run R and the app entirely in the browser
@@ -342,18 +392,23 @@ The minimalistic design supports active learning and exploration.
 
 ## Advantages and Challenges of Web-R
 
-### **Advantages**
-- Runs on any web server, including static ones
-- Eliminates the need for a dedicated Shiny server
+<br>
 
-### **Challenges**
+**Advantages**
+
+- Runs on any web server, including static ones
+- No need for a dedicated Shiny server
+
+**Challenges**
+
 - **Startup delay**: All required packages must be loaded from the web
 - **Package availability**: Some R packages, like **deSolve**, are not compatible with Web-R
 
-### **Solution**
-- Simplify code and reduce dependencies.
-- Use **base graphics** instead of heavier packages like **ggplot2**.
-- Implement a standalone ODE45 solver in pure R to replace unavailable packages.
+**Solution**
+
+- Simplify code and reduce dependencies
+- Use **base graphics** instead of heavier packages like **ggplot2**
+- Implement a standalone ODE45 solver in pure R to replace unavailable packages
 
 ## Demo
 
@@ -406,12 +461,26 @@ The minimalistic design supports active learning and exploration.
     
 ## Acknowledgments
 
+::: {.column width="70%"}
 <br>
 <br>
 
 * Luisa Henze, Monique Meier, Thomas Berendonk
-* Digital Learning and Teaching Fund of TU Dresden [...]{https://tu-dresden.de/zill/foerdermoeglichkeiten/fondsdll}
+* Digital Learning and Teaching Fund of TU Dresden [...](https://tu-dresden.de/zill/foerdermoeglichkeiten/fondsdll)
 
-The R Community
+![TUD - Dresden University of Technology](img/tu_dresden_logo.svg){height=80}
+![Institute of Hydrobiology](img/hydrobiology_logo.svg){height=100}
+
+<br>
+
+**The R Community**
+
+![](img/Rlogo.svg){height=100}
+
+:::
+
+::: {.column width="30%"}
+![](img/waterfall.jpg)
+:::
 
 

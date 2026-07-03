@@ -1,0 +1,23 @@
+.reveal .slide-menu-button {
+  position: fixed;
+  top: auto !important;
+  bottom: 12px !important;
+  left: auto !important;     /* explicitly cancel any left anchor */
+  right: 12px !important;    /* force to the right */
+  width: 2.5em;              /* keep the tight clickable box! */
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Move the slide logo to the bottom-LEFT */
+.reveal .slide-logo {
+  position: fixed;
+  bottom: 12px;
+  right: auto;       /* clear default right positioning */
+  left: 12px;        /* pin to the left */
+  top: auto;
+}
+

@@ -9,7 +9,7 @@ color:
   palette:
     blue: "#0000ff"
   foreground: "#333333"
-  background: "#ffffff"
+  background: "#fafafa"
 
 typography:
   fonts:
