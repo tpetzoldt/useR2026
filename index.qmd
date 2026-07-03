@@ -222,13 +222,21 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 
 ::: {.column width="49%"}
-* App to vizualize essential growth processes
-    - by example of a food-web in a lake
-    - contains extensive textual information
-* Target groups:
-    - students of aquatic ecology
-    - higschool biology teacher students
-    - highschool students (11th year)
+**App to teach essential growth models**
+
+- by example of a food-web in a lake
+- contains extensive textual information
+
+**Target groups**
+
+- students of aquatic ecology
+- higschool biology teacher students
+- highschool students (11th year)
+
+**Implementation**
+
+* document-centric approach in form of a Quarto dashboard.
+
 
 :::
 
@@ -247,15 +255,18 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 <br>
 
-* Outline with repeated elements
-* Caption hierarchy defines dashboard structure
-    - Top Menu
-    - Tabs
-* Modular and extensible
-    - Independent code and text files
-    - Independent testing and debugging
-    - Easy translation
-    - Adaptible for different audiences
+**Outline with repeated elements**
+
+- Caption hierarchy defines dashboard structure
+- Top Menu
+- Cards and Tabs
+
+**Modular and extensible**
+
+- Separate code and text files
+- Independent testing and debugging
+- Easy translation
+- Adaptible for different audiences
 
 :::
 
@@ -364,7 +375,7 @@ Each section has a **Description**, organized as **Panel Tabset**:
 - Hints: Guidance for solving tasks
 - Read More: Links to additional resources or references
 
-The **Widgets and Graphics** card integrates Shiny code to create interactive widgets and visualizations in a two-column layout.
+The **Widgets and Graphics** card integrates Shiny code to create interactive controls and visualization in a two-column layout.
 
 :::
 
