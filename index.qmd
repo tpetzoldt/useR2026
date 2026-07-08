@@ -476,6 +476,7 @@ quarto::quarto_render("simbiose-w.qmd")
 
 
 
+
 ## Summary
 
 1. **Complex Shiny Apps**
@@ -493,7 +494,7 @@ quarto::quarto_render("simbiose-w.qmd")
     - Ideal if number of users is large or unknown, no CPU scaling issues.
     - Ensures longevity of tutorials, independent of external hosting and maintenance.
 
-4. **Dashboards with Shinylive**
+4. [**Dashboards with Shinylive**]{.highlight}
     - Combines the advantages of Quarto Dashboards and Shinylive.
     - A highly appealing approach for teaching apps of medium complexity.
     
@@ -529,4 +530,6 @@ quarto::quarto_render("simbiose-w.qmd")
 [https://github.com/tpetzoldt/useR2026/](https://github.com/tpetzoldt/useR2026/)
 
 
-![](img/by.svg) This work is licensed under the Creative Commons License [CC-BY 4.0 ](https://creativecommons.org/licenses/by/4.0/) 
+![](img/by.svg) 
+
+This work is licensed under the Creative Commons License [CC-BY 4.0 ](https://creativecommons.org/licenses/by/4.0/) 

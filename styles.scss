@@ -126,6 +126,18 @@ ul li::marker {
   line-height: 1.4em;     // Ensures appropriate spacing between lines of code
 }
 
+/* =========================================================
+   HIGHLIGHT UTILITY
+   ========================================================= */
+
+.highlight {
+  background-color: #fff2a3; /* Soft yellow highlight */
+  color: #00305d;            /* Keeps text dark and readable against yellow */
+  /* padding: 2px 6px; */
+  /* border-radius: 4px; */
+  display: inline-block;     /* Ensures padding applies cleanly inside cells */
+}
+
 
 /* =========================================================
    SPACING UTILITIES
