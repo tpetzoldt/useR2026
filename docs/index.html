@@ -99,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-8dd2174d12b7a0336d84d8826023be9b.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-6f7f8f6b07de95fa66aea372b0d11dca.css">
   <link rel="stylesheet" href="footer-logo-left.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -531,11 +531,11 @@ The image is rather small, but the idea is to either:
 <div class="column" style="width:50%;">
 <p>Each section has a <strong>Description</strong>, organized as <strong>Panel Tabset</strong>:</p>
 <ul>
-<li>Example: Introductory text with a real-world scenario</li>
-<li>The Model: Explanation of underlying processes and equations</li>
+<li>Example: Introduction and real-world scenario</li>
+<li>The Model: Explanation of processes and equations</li>
 <li>Tasks: Exercises to explore model dynamics</li>
 <li>Hints: Guidance for solving tasks</li>
-<li>Read More: Links to additional resources or references</li>
+<li>Read More: Links to resources or references</li>
 </ul>
 <p>The <strong>Widgets and Graphics</strong> card integrates Shiny code to create interactive controls and visualization in a two-column layout.</p>
 </div><div class="column" style="width:50%;">
@@ -560,6 +560,32 @@ The image is rather small, but the idea is to either:
 <li>Deployment: No R server or Shiny server is required</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://posit-dev.github.io/r-shinylive/">https://posit-dev.github.io/r-shinylive/</a></p></li><li id="fn2"><p><a href="https://docs.r-wasm.org/webr/">https://docs.r-wasm.org/webr/</a></p></li><li id="fn3"><p><a href="https://webassembly.org/">https://webassembly.org/</a></p></li></ol></aside></section>
+<section id="prerequisites" class="slide level2">
+<h2>Prerequisites</h2>
+<ul>
+<li>Python, numpy, pandas, shinylive, jupyter</li>
+<li>R, shiny, shinylive, quarto, reticulate</li>
+<li>Quarto + shinylive-extension</li>
+</ul>
+<p><strong>Conversion to shinylive</strong></p>
+<div class="blue-code-block">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb2-2"><a href=""></a><span class="fu">library</span>(quarto)</span>
+<span id="cb2-3"><a href=""></a>reticulate<span class="sc">::</span><span class="fu">use_virtualenv</span>(<span class="st">"~/shinylive-env"</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-4"><a href=""></a><span class="fu">system</span>(<span class="st">"quarto add quarto-ext/shinylive --no-prompt"</span>)</span>
+<span id="cb2-5"><a href=""></a>shinylive<span class="sc">::</span><span class="fu">assets_download</span>() <span class="co"># recommended, otherwise 1st time automatically</span></span>
+<span id="cb2-6"><a href=""></a></span>
+<span id="cb2-7"><a href=""></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(<span class="st">"simbiose-w.qmd"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p><br></p>
+<ul>
+<li>Linux: straightforward</li>
+<li>Windows: good experience with miniconda</li>
+<li>Installation issues like download timeout, environment variables and long path names are solvable.</li>
+</ul>
+</section>
 <section id="advantages-and-challenges-of-web-r" class="slide level2">
 <h2>Advantages and Challenges of Web-R</h2>
 <p><br></p>
@@ -690,6 +716,7 @@ The image is rather small, but the idea is to either:
 <h1></h1>
 <p><img data-src="img/qr-github.svg" height="100"></p>
 <p><a href="https://github.com/tpetzoldt/useR2026/">https://github.com/tpetzoldt/useR2026/</a></p>
+<p><img data-src="img/by.svg"> This work is licensed under the Creative Commons License <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 
 </section>
 
@@ -910,6 +937,82 @@ The image is rather small, but the idea is to either:
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

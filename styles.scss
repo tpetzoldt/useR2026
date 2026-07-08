@@ -13,7 +13,6 @@ $headingTextTransform: none;
 $headingLetterSpacing: normal;
 $codeFont: 'Source Code Pro Semibold';
 
-
 /*-- scss:rules --*/
 
 .reveal { font-family: 'Noto Sans', sans-serif; }
@@ -112,10 +111,20 @@ ul li::marker {
 /* =========================================================
    FONT-SIZE UTILITY CLASSES
    ========================================================= */
-
+ 
 .smallfont { font-size:  70%; line-height: 160%; }
 .bigfont   { font-size: 140%; line-height: 160%; }
 .hugefont  { font-size: 200%; line-height: 180%; }
+
+/* =========================================================
+   CODE BLOCK CUSTOMIZATION
+   ========================================================= */
+
+// Targets source code blocks (like R code chunks)
+.reveal pre.sourceCode code {
+  font-size: 1.4em;       // Adjust this value to scale up code blocks (e.g., 1.1em or 1.2em)
+  line-height: 1.4em;     // Ensures appropriate spacing between lines of code
+}
 
 
 /* =========================================================

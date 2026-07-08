@@ -370,11 +370,11 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 Each section has a **Description**, organized as **Panel Tabset**:
 
-- Example: Introductory text with a real-world scenario
-- The Model: Explanation of underlying processes and equations
+- Example: Introduction and real-world scenario
+- The Model: Explanation of processes and equations
 - Tasks: Exercises to explore model dynamics
 - Hints: Guidance for solving tasks
-- Read More: Links to additional resources or references
+- Read More: Links to resources or references
 
 The **Widgets and Graphics** card integrates Shiny code to create interactive controls and visualization in a two-column layout.
 
@@ -400,6 +400,32 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive co
 [^shinylive]: [https://posit-dev.github.io/r-shinylive/](https://posit-dev.github.io/r-shinylive/)
 [^webR]: [https://docs.r-wasm.org/webr/](https://docs.r-wasm.org/webr/)
 [^WebAssembly]: [https://webassembly.org/](https://webassembly.org/)
+
+## Prerequisites
+
+- Python, numpy, pandas, shinylive, jupyter
+- R, shiny, shinylive, quarto, reticulate
+- Quarto + shinylive-extension
+
+**Conversion to shinylive**
+
+::: {.blue-code-block}
+```{r eval=FALSE, echo=TRUE}
+library(reticulate)
+library(quarto)
+reticulate::use_virtualenv("~/shinylive-env", required = TRUE)
+system("quarto add quarto-ext/shinylive --no-prompt")
+shinylive::assets_download() # recommended, otherwise 1st time automatically
+
+quarto::quarto_render("simbiose-w.qmd")
+```
+:::
+
+<br>
+
+* Linux: straightforward
+* Windows: good experience with miniconda
+* Installation issues like download timeout, environment variables and long path names are solvable.
 
 
 ## Advantages and Challenges of Web-R
@@ -503,3 +529,4 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive co
 [https://github.com/tpetzoldt/useR2026/](https://github.com/tpetzoldt/useR2026/)
 
 
+![](img/by.svg) This work is licensed under the Creative Commons License [CC-BY 4.0 ](https://creativecommons.org/licenses/by/4.0/) 
