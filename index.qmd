@@ -58,13 +58,17 @@ format:
 # The Teaching Challenge
 
 
-## Increasing Complexity and Cross-Disciplinary Skills
+## Increasing Complexity $\longrightarrow$ Cross-Disciplinary Skills
 
 <br>
+
+<!--
 
 $\Rightarrow$ Modeling and data science became an important part of almost every field.
-
 <br>
+
+-->
+
 
 
 **Demand in Research and Engineering**
@@ -91,10 +95,10 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 
 **Applications**
 
-* Understanding of statistical concepts (e.g. autocorrelation)
-* Exploration of dynamic systems (growth, predator-prey, chaos)
-* Analysis of experimental data (e.g. from measurement probes)
-* Complex ecological models, e.g. Cyanobacteria in lakes, Reservoir Management
+* Understanding of statistical concepts
+* Analysis of experimental data
+* Exploration of dynamic systems: growth, predator-prey, chaos
+* Complex ecological models: Cyanobacteria in lakes
 
 
 **Advantages**
@@ -103,10 +107,11 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 * Data: Direct access to test cases and real world data
 * Algorithms: full **R** ecosystem available
 
-→ No installation hurdles, no Excel debugging, no problems with csv2
+→ No installation hurdles, no Excel debugging
 
 <br>
 
+<!--
 ## Use Project Communication and Teaching
 
 <br>
@@ -121,6 +126,7 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 * Students who want to become high-school teachers
 * School kids ... and their parents
 
+--->
 
 ## Example 1: Lake Profile Plotter
 
@@ -128,8 +134,7 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 
 ::: {.column width="49%"}
 * Analysis of multiparameter probe data
-    - Complex interactions between temperature, light, algae, oxygen, pH, conductivity
-    - Excel data structures, plotting, trend line, colors, ... distract from content
+* Limited time, avoid technical distractiona
 * Concentrate on scientific background and data interpretation
 :::
 
@@ -137,16 +142,9 @@ $\Rightarrow$ Modeling and data science became an important part of almost every
 ![[https://weblab.hydro.tu-dresden.de/app/lakeplot/](https://weblab.hydro.tu-dresden.de/app/lakeplot/)](img/lakeplot.png){.framed}
 :::
 
-$\Rightarrow$ Has also passed its acid test in field courses.
 
 ## Example 2: Climate Data Explorer
 
-<!---
-The image is rather small, but the idea is to either:
-
-- zoom in with Alt + Mouse click to center of Zoom region
-- open link: it opens in a new browser tab, then move back by selecting the presentation tab
---->
 
 <br></br>
 
@@ -187,7 +185,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 
 # 
 
-[Is everything perfect now?]{.hugefont}
+[Are we happy with this?]{.hugefont}
 
 ::: {.fragment .fade-up}
 [No]{.hugefont}
@@ -211,7 +209,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 * Small apps: Limited complexity, self-explanatory but shallow
 * Complex apps: 
     - High development effort, 
-    - Overwhelming for users, require external explanations (e.g., handouts)
+    - Require additional explanations (e.g., handouts)
 * Storyboards: Linear, more focused on presentation than active learning
 
 
@@ -225,18 +223,18 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 ::: {.column width="49%"}
 **App to teach essential growth models**
 
-- by example of a food-web in a lake
-- contains extensive textual information
+- By example of a food-web in a lake
+- Eextensive textual information included
 
 **Target groups**
 
-- students of aquatic ecology
-- higschool biology teacher students
-- highschool students (11th year)
+- Aquatic ecology students
+- Highschool students (11th year)
+- Future biology teachers
 
 **Implementation**
 
-* document-centric approach in form of a Quarto dashboard.
+* Document-centric approach in form of a Quarto dashboard.
 
 
 :::
@@ -340,8 +338,7 @@ Influence of Climate Warming on Water Availability from Drinking Water Reservoir
 **Unified UI**
 
 - Top-hierarchy as Quarto document
-- Simple, consistent layout
-- → Reduce user confusion
+- → Minimalistic to reduce user confusion
 
 **Integrated Design**
 
@@ -389,11 +386,15 @@ The **Widgets and Graphics** card integrates Shiny code to create interactive co
 
 # Step 2: "Serverless" Deployment
 
-## Avoid Specialized Shiny Server
+## WebR -- R in the Browser
 
 <br><br>
 
-- Convert Shiny app with **shinylive**[^shinylive] into standalone **Web-R**[^webR]-Apps
+**Avoids Specialized Shiny Server**
+
+<br>
+
+- Convert Shiny app with **shinylive**[^shinylive] into standalone **WebR**[^webR]-Apps
 - Uses **WebAssembly**[^WebAssembly] to run R and the app entirely in the browser
 - Deployment: No R server or Shiny server is required
 
@@ -482,20 +483,17 @@ quarto::quarto_render("simbiose-w.qmd")
 1. **Complex Shiny Apps**
     - For complex applications requiring backend integration, databases, etc.
     - High flexibility but significant technical and implementation overhead.
-    - Didactic material often separate, less suitable for self-directed learning.
 
 2. **Quarto Dashboards with Shiny**
     - Balance between complexity and ease of use.
-    - Suitable for moderately complex applications.
-    - Integrates text, visualization, and interactivity in a single document.
+    - Text, visualization, and interactivity in a single document.
 
 3. **Shinylive Apps**
     - Best for lightweight applications that run entirely in the browser.
-    - Ideal if number of users is large or unknown, no CPU scaling issues.
-    - Ensures longevity of tutorials, independent of external hosting and maintenance.
-
+    - Ensures longevity of tutorials, independent of external hosting, no CPU scaling issues.
+    
 4. [**Dashboards with Shinylive**]{.highlight}
-    - Combines the advantages of Quarto Dashboards and Shinylive.
+    - Combines advantages of Quarto Dashboards and Shinylive.
     - A highly appealing approach for teaching apps of medium complexity.
     
 ## Acknowledgments
